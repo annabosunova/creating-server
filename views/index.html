@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head of html document-->
+<head>
+    <script type="application/javascript" src="script.js"></script>
+    <!--Indicates webpage character's encoding-->
+    <meta charset="UTF-8" />
+    <!--Insures responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Title of the page-->
+    <title>Anna's webpage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<!--Body of html document-->
+
+<body>
+    <!--Header of the page-->
+    <header>
+        <!--Navigation tag used for navigation through the page.
+        Contains links to different page sections-->
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Home</a> </li>
+                <li><a href="/about">About</a> </li>
+                <li><a href="/skills">Skills</a> </li>
+                <li> <a href="/portfolio">Projects</a> </li>
+                <li> <a href="/contact">Contact</a></li>
+                <li><button id="mode" onclick="switchModeWhite()">☀</button></li>
+                <li><button id="mode" onclick="switchModeDark()">☾</button></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!--Home Section-->
+    <section id="home-section">
+        <div id="home">
+            <div class="content">
+                <h1 class="home-header">Hi, I'm Anna</h1>
+                <h3>Software Engineer</h3>
+                <p>I'm a professional Software Engineer. <br>
+                    I am eager to solve your problems!
+                </p>
+                <button id="resume-btn" onclick="downloadResume()">Download Resume</button>
+            </div>
+            <div class="image">
+                <img src="/imgs/home-img.png" alt="Anna's image">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

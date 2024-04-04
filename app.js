@@ -1,34 +1,41 @@
-/**
- * A Node.js script that sets up a HTTP server
- * It requires http and fs (file system) modules,
- * that are used to create an HTTP server and read a file
- */
+const express = require('express');
 
-const http = require('http');
-const fs = require('fs');
-const port = 3000;
-// create server
-const server = http.createServer(function(req,res) {
-    // update response status
-    res.writeHead(200, {'Content-Type':'text/html'})
-    // read index.html
-    fs.readFile('index.html', function(error, data) {
-        if(error) {
-            // update response status in case of error
-            res.writeHead(404);
-            res.write('Error: File not found');
-         } else {
-            res.write(data);
-         }
-         res.end();
-    })
-})
-// start server listening
-server.listen(port,function(error) {
-    if(error) {
-        console.log('Something went wrong', error);
-    } else {
-        console.log('Server is listening on port ' + port);
+// express app
+const app = express();
 
-    }
-})
+app.listen(3000);
+
+// home page
+app.get('/', (req, res) => {
+    res.sendFile('./views/index.html', { root: __dirname });
+});
+
+// about page
+app.get('/about', (req, res) => {
+    res.sendFile('./views/about.html', { root: __dirname });
+
+});
+
+// skills page
+app.get('/skills', (req, res) => {
+    res.sendFile('./views/skills.html', { root: __dirname });
+
+});
+
+// portfolio page
+app.get('/portfolio', (req, res) => {
+    res.sendFile('./views/portfolio.html', { root: __dirname });
+
+});
+
+// contact page
+app.get('/contact', (req, res) => {
+    res.sendFile('./views/contact.html', { root: __dirname });
+
+});
+
+// 404 page
+app.use((req, res) => {
+    res.status(404).sendFile('./views/404.html', { root: __dirname });
+  });
+
