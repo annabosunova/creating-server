@@ -1,0 +1,171 @@
+body {
+    background-color: #1A1A1D;
+    color: #d0d1d3;
+    font-size: 30px;
+  
+  }
+  
+  h1 {
+    font-size: clamp(1rem, 5vw, 3.5rem);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 300;
+  }
+  
+  h3 {
+    font-size: clamp(0.8rem, 3vw, 2.5rem);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #C3073F;
+  }
+  
+  p {
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
+  }
+  
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    /* Remove bullet points */
+    padding: 0;
+    z-index: 1000;
+  
+  }
+  
+  .menu li {
+    margin-right: 2%;
+  }
+  
+  .menu a {
+    color:#d0d1d3;
+    text-decoration: none;
+  }
+  
+  #home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #resume-btn {
+    padding: 10px;
+    font-size: clamp(0.8rem, 1vw, 1.5rem);
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #6F2232;
+    border-radius: 8px;
+    border: 2px solid #6F2232;
+    transition-duration: 0.4s;
+    color: rgb(229, 203, 203);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  
+  }
+  
+  #resume-btn:hover {
+    background-color: #8c2649; 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+  
+  #resume-btn:active {
+    transform: translateY(4px);
+  }
+  
+  #about,
+  #portfolio,
+  #contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .image img {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  #skills-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 100px;
+  }
+  
+  .cards {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 5%;
+    gap: 2.5vh;
+  }
+  
+  .skill-card {
+    height: 15vw;
+    width: 15vw;
+    background-color: #6F2232;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vh;
+    transition: all ease 0.5s;
+  }
+  
+  .skill-card:hover {
+    background-color: #C3073F;
+  }
+  
+  .skill-card img {
+    height: 25%;
+    width: 25%;
+    object-fit: contain;
+  }
+  
+  .skill-card h2 {
+    font-size: clamp(0.3rem, 4vw, 2rem);
+    font-weight: 400;
+    color: #fbfbfb;
+  }
+  
+  #form1 {
+    background-color: #6F2232;
+    padding: 2%;
+    border-radius: 5%;
+    box-shadow: 0px 0px 50px 0px #6F2232;
+    transition: all ease 0.5s;
+  
+  
+  }
+  
+  #form1:hover {
+    background-color: #C3073F;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    body {
+      font-size: 1em;
+    }
+    body p {
+      font-size: 0.4rem;
+    }
+  
+    body h1 {
+      font-size: 1.2rem;
+    }
+  
+    body h3 {
+      font-size: 0.8rem;
+    }
+  
+    .skill-card h2 {
+      font-size: 0.8em;
+    }
+  
+  }

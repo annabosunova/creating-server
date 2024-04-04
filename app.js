@@ -3,7 +3,8 @@ const express = require('express');
 // express app
 const app = express();
 
-app.listen(3000);
+// serve static files from the 'public' directory
+app.use(express.static('public'));
 
 // home page
 app.get('/', (req, res) => {
@@ -39,3 +40,11 @@ app.use((req, res) => {
     res.status(404).sendFile('./views/404.html', { root: __dirname });
   });
 
+const userRouter = require('./routers/users');
+
+
+// add all the different routes from userRouter
+// to anything that starts with './users'
+app.use('/users', userRouter);
+
+app.listen(3000);
